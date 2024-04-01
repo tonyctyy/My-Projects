@@ -6,6 +6,9 @@ The Star Planner Coaching System is a comprehensive platform designed for Academ
 
 The Star Planner Coaching System is a powerful tool tailored for Academic Coaching, offering essential features to enhance student engagement and academic success. With intuitive goal setting, task management, and insightful reporting capabilities, the system empowers educators and students alike to foster a culture of accountability and progress.
 
+Official Website: [Star Planner](https://star-planner.com/)
+Coaching System: [Star Planner AC Platform](https://coaching.star-planner.com/)
+
 ### Key Features:
 
 - **Goal Setting & Evaluation**: Empower students and educators to set and assess academic goals, fostering a culture of accountability and progress tracking.
@@ -41,3 +44,12 @@ The Star Planner Coaching System is designed to seamlessly integrate into educat
 We have integrated GPT-3 for generating comments and feedback for students. Here is a sample of the code snapshot:
 
 ![GPT Code](./screenshots/gpt-code.png)
+
+## Repository
+
+Find the source code and additional information in the [Star Planner API](https://github.com/SPTonyChan/star-planner-api)
+and [Star Planner FE](https://github.com/SPTonyChan/star-planner-fe) repositories.
+
+## License
+
+This project is proprietary and owned by Star Planner. Unauthorized use, reproduction, or distribution is strictly prohibited.
