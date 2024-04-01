@@ -27,7 +27,17 @@ The Star Planner Coaching System is designed to seamlessly integrate into educat
 
 ## Screenshots
 
+### Dashboard:
+
 ![Dashboard](./screenshots/dashboard.png)
+
+### Final Report:
+
 ![Final Report 1](./screenshots/final-report-1.png)
 ![Final Report 2](./screenshots/final-report-2.png)
+
+### Chat GPT:
+
+We have integrated GPT-3 for generating comments and feedback for students. Here is a sample of the code snapshot:
+
 ![GPT Code](./screenshots/gpt-code.png)
