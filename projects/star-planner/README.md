@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Star Planner Coaching System
 
 The Star Planner Coaching System is a comprehensive platform designed for Academic Coaching (AC), aimed at supporting the coaching cycle and generating insightful reports for educational stakeholders.

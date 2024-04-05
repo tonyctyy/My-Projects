@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # COMP4321-Crawler
 
 COMP4321-Crawler is a web crawler project developed as part of the COMP4321 Information Retrieval course. It aims to provide basic web crawling and indexing functionalities, along with a simple search engine interface.

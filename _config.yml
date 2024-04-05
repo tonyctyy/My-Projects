@@ -1,5 +1,10 @@
 theme: jekyll-theme-minimal
 title: Tony's homepage
 description: The overall review of the projects I have been invovled.
-star_planner_url: "/My-Projects/projects/star-planner"
-web_crawler_url: "/My-Projects/projects/web-crawler"
+navigation_links:
+  - text: Home
+    url: /My-Projects
+  - text: Star Planner
+    url: /My-Projects/projects/star-planner
+  - text: Web Crawler
+    url: /My-Projects/projects/web-crawler
