@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
     <div class="wrapper">
@@ -26,15 +27,20 @@
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
 
-        {% assign sorted = site.html_pages | sort:"rank" %}
+        <li>
+            <a href="/projects/star-planner"> Star Planner</a>
+        </li>
+
+
+        <!-- {% assign sorted = site.html_pages | sort:"rank" %}
         {% for item in sorted %}
           {% if item.path != "index.md" and item.title and item.rank %}
             <li>
               <a href="{{ item.path | replace:'.md','.html' }}">{{ item.title }}</a>
-              <!-- <span> [ {{ item.path }} - {{ item.title }} - {{ item.rank }} ] </span> -->
+              <span> [ {{ item.path }} - {{ item.title }} - {{ item.rank }} ] </span>
             </li>
           {% endif %}
-        {% endfor %}
+        {% endfor %} -->
       </header>
       <section>
 
@@ -42,5 +48,7 @@
 
       </section>
     </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
   </body>
 </html>
