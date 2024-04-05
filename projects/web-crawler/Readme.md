@@ -1,10 +1,10 @@
-# COMP4321-Crawler
+# COMP4321 Crawler
 
-COMP4321-Crawler is a web crawler project developed as part of the COMP4321 Information Retrieval course. It aims to provide basic web crawling and indexing functionalities, along with a simple search engine interface.
+COMP4321 Crawler is a web crawler project developed as part of the COMP4321 Information Retrieval course. It aims to provide basic web crawling and indexing functionalities, along with a simple search engine interface.
 
 ## Overview
 
-COMP4321-Crawler is an ongoing project focused on building a web crawler and search engine using Java. The project consists of four main functions:
+COMP4321 Crawler is an ongoing project focused on building a web crawler and search engine using Java. The project consists of four main functions:
 
 1. **Spider Function**: Fetches pages recursively from a given website.
 2. **Indexer**: Extracts keywords from a page and inserts them into an inverted file.
