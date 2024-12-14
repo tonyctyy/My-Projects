@@ -4,9 +4,6 @@ The Star Planner Coaching System is a comprehensive platform designed for Academ
 ## Overview
 The Star Planner Coaching System is a powerful tool tailored for Academic Coaching, offering essential features to enhance student engagement and academic success. With intuitive goal setting, task management, and insightful reporting capabilities, the system empowers educators and students alike to foster a culture of accountability and progress.
 
-Official Website: [Star Planner](https://star-planner.com/)
-Coaching System: [Star Planner AC Platform](https://coaching.star-planner.com/)
-
 ### Key Features:
 - **Goal Setting & Evaluation**: Empower students and educators to set and assess academic goals, fostering a culture of accountability and progress tracking.
 - **Task Setting & Evaluation**: Facilitate the creation and evaluation of tasks, ensuring clarity and alignment with academic objectives.
