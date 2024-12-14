@@ -20,25 +20,6 @@ The primary challenge in building a useful CR system is effectively capturing an
 - **Research Paper**: A comprehensive overview of CR techniques, common issues, and performance evaluations, along with suggestions for future research.
 - **Project Video**: A video showcasing the CR system and its key features.
 
-## Project Timeline
-| Task | Duration | Completion Date |
-|------|----------|-----------------|
-| Study the Background of CR | 3 months | 17/11 |
-| Study and Select the Dataset | 2 months | 17/11 |
-| Research on System Setup | 1 month | 17/11 |
-| Data Pre-Processing | 2 weeks | 31/11 |
-| 1st Stage BE (Retrieval) | 1 month | 31/12 |
-| 2nd Stage BE (Pre-Ranking + Ranking) | 1 month | 31/1 |
-| 1st Stage FE (Draft for UAT) | 1 month | 31/1 |
-| 1st UAT + 3rd Stage BE (Revamp + Re-Ranking) | 1 month | 28/2 |
-| 2nd Stage FE (80%) | 1 month | 28/2 |
-| Final Report (1st half) | 2 weeks | 16/3 |
-| 2nd UAT + 4th Stage BE (Revamp + Other Features) | 1 month | 31/3 |
-| Final Report (2nd half) | 2 weeks | 6/4 |
-| 3rd UAT (Final Evaluation) | 2 weeks | 13/4 |
-| 3rd Stage FE (Finalize) | 2 weeks | 13/4 |
-| Video Production | 1 month | 30/4 (TBC) |
-
 ### Importance of Expected Results
 1. **Relevance of Recommendations**: The CR system aims to deliver relevant search results based on user input, enhancing user satisfaction and engagement.
 2. **Performance and Diversity of Techniques/Models**:
