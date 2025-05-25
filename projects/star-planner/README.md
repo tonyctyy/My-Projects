@@ -33,8 +33,7 @@ We have integrated GPT-3 for generating comments and feedback for students. Here
 ![GPT Code](./screenshots/gpt-code.png)
 
 ## Repository
-Find the source code and additional information in the [Star Planner API](https://github.com/SPTonyChan/star-planner-api)
-and [Star Planner FE](https://github.com/SPTonyChan/star-planner-fe) repositories.
+Find the source code and additional information in the [Star Planner](https://github.com/tonyctyy/StarPlanner)
 
 ## License
 This project is proprietary and owned by Star Planner. Unauthorized use, reproduction, or distribution is strictly prohibited.

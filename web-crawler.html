@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawler | My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Project Title -->
+    <section class="text-center py-16">
+        <h1 class="text-5xl font-bold mb-4">Web Crawler</h1>
+        <p class="text-xl">A Java-based web crawler with indexing and search functionalities (Mar 2024 - May 2024)</p>
+    </section>
+
+    <!-- Project Content -->
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Overview</h2>
+        <p>
+            COMP4321-Crawler is a web crawler and search engine project developed for the COMP4321 Information Retrieval course. It focuses on building a functional search engine with a spider for web crawling, an indexer for keyword extraction, and a retrieval function that ranks results based on relevance.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-2">Key Features</h3>
+        <ul class="list-disc list-inside">
+            <li>Spider Function: Recursively fetches pages from a given website.</li>
+            <li>Indexer: Extracts keywords from pages and inserts them into an inverted file.</li>
+            <li>Retrieval Function: Compares query terms against the inverted file and returns top-ranked documents, supporting phrase queries.</li>
+            <li>Web Interface: Allows users to input queries, submit them, and view ranked results.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-2">System Design</h3>
+        <p><strong>Backend: Web Crawler and Indexer (Java)</strong></p>
+        <ul class="list-disc list-inside">
+            <li>Crawler: Implements a Breadth-First Search (BFS) algorithm.</li>
+            <li>Indexer: Handles text processing (stop word removal, stemming, n-gram extraction).</li>
+            <li>Database: Uses JDBM for efficient data retrieval.</li>
+        </ul>
+        <p><strong>Frontend: Search Engine Interface (Apache Tomcat)</strong></p>
+        <ul class="list-disc list-inside">
+            <li>Search Engine: Simple, user-friendly interface.</li>
+            <li>Result Ranking: Uses a vector space model with cosine similarity.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-2">Technology Stack</h3>
+        <ul class="list-disc list-inside">
+            <li>Programming Language: Java</li>
+            <li>Frontend: Apache Tomcat</li>
+            <li>Database: JDBM</li>
+            <li>Java Version: OpenJDK 21.0.2</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-2">Screenshots</h3>
+        <p>Search Result:</p>
+        <img src="screenshots/web-crawler/search-result.jpg" alt="Search Result" class="w-full mb-4">
+        <p>Advance Search with OR/AND Operator:</p>
+        <img src="screenshots/web-crawler/and-or-search.jpg" alt="Advance Search" class="w-full mb-4">
+        <p>Keyword Table:</p>
+        <img src="screenshots/web-crawler/keyword-table.jpg" alt="Keyword Table" class="w-full mb-4">
+
+        <h3 class="text-2xl font-semibold mt-6 mb-2">Repository</h3>
+        <p>
+            Find the source code and additional information in the 
+            <a href="https://github.com/tonyctyy/COMP4321-Crawler" class="text-blue-400 hover:underline">COMP4321-Crawler GitHub repository</a>.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-2">License</h3>
+        <p>
+            This project is open-source and available under the MIT License.
+        </p>
+
+        <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-8 inline-block">Back to Home</a>
+    </section>
+</body>
+</html>
