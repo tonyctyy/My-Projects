@@ -3,66 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Planner | My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Star Planner | Tony Chan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Project Title -->
-    <section class="text-center py-16">
-        <h1 class="text-5xl font-bold mb-4">Star Planner</h1>
-        <p class="text-xl">A startup web app designed to streamline academic coaching processes (Jun 2023 - Jan 2024)</p>
-    </section>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Tony Chan</h2>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Decision Analytics & AI</p>
+            </div>
+            
+            <div class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Portfolio</div>
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Large Projects</div>
+                    <a href="content-recommendation.html" class="nav-link">Content Recommendation</a>
+                    <a href="star-planner.html" class="nav-link active">Star Planner</a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Small Projects</div>
+                    <a href="web-crawler.html" class="nav-link">Web Crawler</a>
+                    <a href="stock-prediction.html" class="nav-link">Stock Prediction</a>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Project Content -->
-    <section class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold mb-4">Overview</h2>
-        <p>
-            The Star Planner Coaching System is a comprehensive platform designed for Academic Coaching (AC), aimed at supporting the coaching cycle and generating insightful reports for educational stakeholders. It empowers educators and students with tools to enhance engagement and academic success.
-        </p>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero fade-in">
+                    <h1>Star Planner</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                        Academic Coaching Web Application • Jun 2023 - Jan 2024
+                    </p>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Key Features</h3>
-        <ul class="list-disc list-inside">
-            <li>Goal Setting & Evaluation</li>
-            <li>Task Setting & Evaluation</li>
-            <li>Mini-Timetable</li>
-            <li>Session Report Generation</li>
-            <li>Comprehensive Reporting</li>
-        </ul>
+                <!-- Overview -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Overview</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            The Star Planner Coaching System is a comprehensive platform designed for Academic Coaching (AC), aimed at supporting the coaching cycle and generating insightful reports for educational stakeholders. It empowers educators and students with tools to enhance engagement and academic success.
+                        </p>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Technology Stack</h3>
-        <ul class="list-disc list-inside">
-            <li>Frontend: React.js</li>
-            <li>Backend: Django.py</li>
-            <li>Database: MySQL</li>
-            <li>Deployment: Azure Web Services</li>
-        </ul>
+                <!-- Key Features -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Key Features</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="feature-list">
+                            <li>Goal Setting & Evaluation - Comprehensive goal tracking system</li>
+                            <li>Task Setting & Evaluation - Task management with progress monitoring</li>
+                            <li>Mini-Timetable - Integrated scheduling system</li>
+                            <li>Session Report Generation - Automated reporting tools</li>
+                            <li>Comprehensive Reporting - Detailed analytics and insights</li>
+                        </ul>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Usage</h3>
-        <p>
-            The Star Planner Coaching System is designed to seamlessly integrate into educational environments, providing a user-friendly interface for educators and students. Sign in to the system to start leveraging its powerful features for academic success.
-        </p>
+                <!-- Technology Stack -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Technology Stack</h2>
+                    </div>
+                    <div class="card">
+                        <div class="tech-stack" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--text-primary);">Frontend:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">React.js</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Backend:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Django</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Database:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">MySQL</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Deployment:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Azure Web Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Screenshots</h3>
-        <p>Dashboard:</p>
-        <img src="screenshots/star-planner/dashboard.png" alt="Dashboard" class="w-full mb-4">
-        <p>Final Report:</p>
-        <img src="screenshots/star-planner/final-report-1.png" alt="Final Report 1" class="w-full mb-4">
-        <img src="screenshots/star-planner/final-report-2.png" alt="Final Report 2" class="w-full mb-4">
-        <p>Chat GPT Integration:</p>
-        <img src="screenshots/star-planner/gpt-code.png" alt="GPT Code" class="w-full mb-4">
+                <!-- Usage -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>System Usage</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            The Star Planner Coaching System is designed to seamlessly integrate into educational environments, providing a user-friendly interface for educators and students. The system supports the complete coaching cycle from goal setting to comprehensive reporting, making academic coaching more efficient and data-driven.
+                        </p>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Repository</h3>
-        <p>
-            Find the source code and additional information in the 
-            <a href="https://github.com/tonyctyy/StarPlanner" class="text-blue-400 hover:underline">Star Planner GitHub repository</a>.
-        </p>
+                <!-- Screenshots -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Screenshots</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Dashboard Interface</h3>
+                        <img src="screenshots/star-planner/dashboard.png" alt="Star Planner Dashboard" class="project-image">
+                        
+                        <h3>Comprehensive Reports</h3>
+                        <img src="screenshots/star-planner/final-report-1.png" alt="Final Report Page 1" class="project-image">
+                        <img src="screenshots/star-planner/final-report-2.png" alt="Final Report Page 2" class="project-image">
+                        
+                        <h3>ChatGPT Integration</h3>
+                        <img src="screenshots/star-planner/gpt-code.png" alt="GPT Integration Code" class="project-image">
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">License</h3>
-        <p>
-            This project is proprietary and owned by Star Planner. Unauthorized use, reproduction, or distribution is strictly prohibited.
-        </p>
+                <!-- Links -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Links & Information</h2>
+                    </div>
+                    <div class="card">
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-top: 0;">Repository</h3>
+                            <p>Find the source code and additional information in the Star Planner GitHub repository:</p>
+                            <a href="https://github.com/tonyctyy/StarPlanner" class="btn btn-primary" style="margin-top: 0.5rem;">
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h3>License</h3>
+                            <p style="color: var(--text-muted);">This project is proprietary and owned by Star Planner. Unauthorized use, reproduction, or distribution is strictly prohibited.</p>
+                        </div>
+                    </div>
+                </section>
 
-        <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-8 inline-block">Back to Home</a>
-    </section>
+                <!-- Navigation -->
+                <section class="section fade-in">
+                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !menuBtn.contains(event.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>

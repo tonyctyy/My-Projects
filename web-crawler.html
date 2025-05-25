@@ -3,72 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Crawler | My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Web Crawler | Tony Chan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Project Title -->
-    <section class="text-center py-16">
-        <h1 class="text-5xl font-bold mb-4">Web Crawler</h1>
-        <p class="text-xl">A Java-based web crawler with indexing and search functionalities (Mar 2024 - May 2024)</p>
-    </section>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Tony Chan</h2>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Decision Analytics & AI</p>
+            </div>
+            
+            <div class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Portfolio</div>
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Large Projects</div>
+                    <a href="content-recommendation.html" class="nav-link">Content Recommendation</a>
+                    <a href="star-planner.html" class="nav-link">Star Planner</a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Small Projects</div>
+                    <a href="web-crawler.html" class="nav-link active">Web Crawler</a>
+                    <a href="stock-prediction.html" class="nav-link">Stock Prediction</a>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Project Content -->
-    <section class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold mb-4">Overview</h2>
-        <p>
-            COMP4321-Crawler is a web crawler and search engine project developed for the COMP4321 Information Retrieval course. It focuses on building a functional search engine with a spider for web crawling, an indexer for keyword extraction, and a retrieval function that ranks results based on relevance.
-        </p>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero fade-in">
+                    <h1>Web Crawler</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                        Java-based Search Engine Project • Mar 2024 - May 2024
+                    </p>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Key Features</h3>
-        <ul class="list-disc list-inside">
-            <li>Spider Function: Recursively fetches pages from a given website.</li>
-            <li>Indexer: Extracts keywords from pages and inserts them into an inverted file.</li>
-            <li>Retrieval Function: Compares query terms against the inverted file and returns top-ranked documents, supporting phrase queries.</li>
-            <li>Web Interface: Allows users to input queries, submit them, and view ranked results.</li>
-        </ul>
+                <!-- Overview -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Overview</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            COMP4321-Crawler is a web crawler and search engine project developed for the COMP4321 Information Retrieval course. It focuses on building a functional search engine with a spider for web crawling, an indexer for keyword extraction, and a retrieval function that ranks results based on relevance.
+                        </p>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">System Design</h3>
-        <p><strong>Backend: Web Crawler and Indexer (Java)</strong></p>
-        <ul class="list-disc list-inside">
-            <li>Crawler: Implements a Breadth-First Search (BFS) algorithm.</li>
-            <li>Indexer: Handles text processing (stop word removal, stemming, n-gram extraction).</li>
-            <li>Database: Uses JDBM for efficient data retrieval.</li>
-        </ul>
-        <p><strong>Frontend: Search Engine Interface (Apache Tomcat)</strong></p>
-        <ul class="list-disc list-inside">
-            <li>Search Engine: Simple, user-friendly interface.</li>
-            <li>Result Ranking: Uses a vector space model with cosine similarity.</li>
-        </ul>
+                <!-- Key Features -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Key Features</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="feature-list">
+                            <li>Spider Function - Recursively fetches pages from a given website using BFS algorithm</li>
+                            <li>Indexer - Extracts keywords from pages and inserts them into an inverted file structure</li>
+                            <li>Retrieval Function - Compares query terms against the inverted file and returns top-ranked documents</li>
+                            <li>Phrase Query Support - Advanced search capabilities with phrase matching</li>
+                            <li>Web Interface - User-friendly interface for query input and result display</li>
+                        </ul>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Technology Stack</h3>
-        <ul class="list-disc list-inside">
-            <li>Programming Language: Java</li>
-            <li>Frontend: Apache Tomcat</li>
-            <li>Database: JDBM</li>
-            <li>Java Version: OpenJDK 21.0.2</li>
-        </ul>
+                <!-- System Design -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>System Architecture</h2>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Backend Components</h3>
+                            <ul class="feature-list">
+                                <li>Crawler with Breadth-First Search (BFS) implementation</li>
+                                <li>Text processing pipeline (stop word removal, stemming)</li>
+                                <li>N-gram extraction for enhanced search capabilities</li>
+                                <li>JDBM database for efficient data storage and retrieval</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Frontend Interface</h3>
+                            <ul class="feature-list">
+                                <li>Clean, intuitive search interface</li>
+                                <li>Vector space model with cosine similarity ranking</li>
+                                <li>Advanced search with AND/OR operators</li>
+                                <li>Comprehensive result display with relevance scoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Screenshots</h3>
-        <p>Search Result:</p>
-        <img src="screenshots/web-crawler/search-result.jpg" alt="Search Result" class="w-full mb-4">
-        <p>Advance Search with OR/AND Operator:</p>
-        <img src="screenshots/web-crawler/and-or-search.jpg" alt="Advance Search" class="w-full mb-4">
-        <p>Keyword Table:</p>
-        <img src="screenshots/web-crawler/keyword-table.jpg" alt="Keyword Table" class="w-full mb-4">
+                <!-- Technology Stack -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Technology Stack</h2>
+                    </div>
+                    <div class="card">
+                        <div class="tech-stack" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--text-primary);">Programming Language:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Java (OpenJDK 21.0.2)</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Web Server:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Apache Tomcat</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Database:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">JDBM</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Algorithms:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">BFS</span>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Vector Space Model</span>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Cosine Similarity</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">Repository</h3>
-        <p>
-            Find the source code and additional information in the 
-            <a href="https://github.com/tonyctyy/COMP4321-Crawler" class="text-blue-400 hover:underline">COMP4321-Crawler GitHub repository</a>.
-        </p>
+                <!-- Screenshots -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>System Screenshots</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Search Results Interface</h3>
+                        <img src="screenshots/web-crawler/search-result.jpg" alt="Web Crawler Search Results" class="project-image">
+                        
+                        <h3>Advanced Search with Boolean Operators</h3>
+                        <img src="screenshots/web-crawler/and-or-search.jpg" alt="Advanced Search with AND/OR operators" class="project-image">
+                        
+                        <h3>Keyword Analysis Table</h3>
+                        <img src="screenshots/web-crawler/keyword-table.jpg" alt="Keyword frequency table" class="project-image">
+                    </div>
+                </section>
 
-        <h3 class="text-2xl font-semibold mt-6 mb-2">License</h3>
-        <p>
-            This project is open-source and available under the MIT License.
-        </p>
+                <!-- Links -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Links & Information</h2>
+                    </div>
+                    <div class="card">
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-top: 0;">Repository</h3>
+                            <p>Find the source code and additional information in the COMP4321-Crawler GitHub repository:</p>
+                            <a href="https://github.com/tonyctyy/COMP4321-Crawler" class="btn btn-primary" style="margin-top: 0.5rem;">
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h3>License</h3>
+                            <p style="color: var(--text-muted);">This project is open-source and available under the MIT License.</p>
+                        </div>
+                    </div>
+                </section>
 
-        <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-8 inline-block">Back to Home</a>
-    </section>
+                <!-- Navigation -->
+                <section class="section fade-in">
+                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !menuBtn.contains(event.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>

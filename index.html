@@ -3,78 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tony Chan | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Hero Section -->
-    <section class="text-center py-16">
-        <h1 class="text-5xl font-bold mb-4">Welcome to My Portfolio</h1>
-    </section>
-
-    <!-- About Me Section -->
-    <section class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-lg">
-            I am a final-year student at the Hong Kong University of Science and Technology, pursuing a Bachelor of Decision Analytics with an Extended Major in Artificial Intelligence. My academic journey has provided me with a strong foundation in financial modeling, machine learning, and various programming languages. I have actively engaged in projects that bridge theory and practice, allowing me to apply my knowledge to real-world challenges. As a highly adaptable learner and problem-solver, I am passionate about using technology to drive innovative solutions.
-        </p>
-    </section>
-
-    <!-- Large-Scale Projects Section -->
-    <section class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold mb-4">Large-Scale Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Content Recommendation System -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-semibold mb-2">Content Recommendation System (Ongoing - FYP Project)</h3>
-                <p class="mb-4">
-                    My final year project focused on developing a content recommendation system to address common challenges like data sparsity and the cold-start problem.
-                </p>
-                <a href="content-recommendation.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Project</a>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Tony Chan</h2>
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Decision Analytics & AI</p>
             </div>
-            <!-- Star Planner -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-semibold mb-2">Star Planner (Jun 2023 - Jan 2024)</h3>
-                <p class="mb-4">
-                    A startup web app designed to streamline academic coaching processes.
-                </p>
-                <a href="star-planner.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Project</a>
+            
+            <div class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Portfolio</div>
+                    <a href="index.html" class="nav-link active">Home</a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Large Projects</div>
+                    <a href="content-recommendation.html" class="nav-link">Content Recommendation</a>
+                    <a href="star-planner.html" class="nav-link">Star Planner</a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Small Projects</div>
+                    <a href="web-crawler.html" class="nav-link">Web Crawler</a>
+                    <a href="stock-prediction.html" class="nav-link">Stock Prediction</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- Small-Scale Projects Section -->
-    <section class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold mb-4">Small-Scale Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Web Crawler -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-semibold mb-2">Web Crawler (Mar 2024 - May 2024)</h3>
-                <p class="mb-4">
-                    A course project focused on developing a Java-based web crawler with indexing and search functionalities.
-                </p>
-                <a href="web-crawler.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Project</a>
-            </div>
-            <!-- Stock Prediction -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-semibold mb-2">Stock Prediction with Sentiment Analysis (May 2024)</h3>
-                <p class="mb-4">
-                    A machine learning project integrating sentiment analysis with financial data for stock prediction.
-                </p>
-                <a href="stock-prediction.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Project</a>
-            </div>
-        </div>
-    </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero fade-in">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                        Decision Analytics & AI Student at HKUST
+                    </p>
+                </section>
 
-    <!-- Contact Me Section -->
-    <section class="container mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-        <p>Feel free to reach out to me if you have any questions or would like to collaborate.</p>
-        <ul class="mt-4">
-            <li>Email: <a href="mailto:tonyctyy@gmail.com" class="text-blue-400 hover:underline">tonyctyy@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/tonyctyy/" class="text-blue-400 hover:underline">Tony Yuen Yeung CHAN</a></li>
-            <li>GitHub: <a href="https://github.com/tonyctyy" class="text-blue-400 hover:underline">tonyctyy</a></li>
-        </ul>
-    </section>
+                <!-- About Me Section -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            I am a final-year student at the Hong Kong University of Science and Technology, pursuing a Bachelor of Decision Analytics with an Extended Major in Artificial Intelligence. My academic journey has provided me with a strong foundation in financial modeling, machine learning, and various programming languages.
+                        </p>
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            I have actively engaged in projects that bridge theory and practice, allowing me to apply my knowledge to real-world challenges. As a highly adaptable learner and problem-solver, I am passionate about using technology to drive innovative solutions.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Large-Scale Projects Section -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Large-Scale Projects</h2>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Content Recommendation System</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem;">Ongoing - FYP Project</p>
+                            <p>
+                                My final year project focused on developing a content recommendation system to address common challenges like data sparsity and the cold-start problem.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Recommendation Systems</span>
+                            </div>
+                            <a href="content-recommendation.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Star Planner</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem;">Jun 2023 - Jan 2024</p>
+                            <p>
+                                A startup web app designed to streamline academic coaching processes with comprehensive tools for educators and students.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Azure</span>
+                            </div>
+                            <a href="star-planner.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Small-Scale Projects Section -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Small-Scale Projects</h2>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Web Crawler</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem;">Mar 2024 - May 2024</p>
+                            <p>
+                                A Java-based web crawler with indexing and search functionalities, implementing BFS algorithms and vector space models.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Apache Tomcat</span>
+                                <span class="tech-tag">JDBM</span>
+                            </div>
+                            <a href="web-crawler.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Stock Prediction</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem;">May 2024</p>
+                            <p>
+                                A machine learning project integrating sentiment analysis with financial data for enhanced stock prediction accuracy.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">ML</span>
+                                <span class="tech-tag">Sentiment Analysis</span>
+                            </div>
+                            <a href="stock-prediction.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Contact Me</h2>
+                    </div>
+                    <div class="card">
+                        <p style="margin-bottom: 1.5rem;">Feel free to reach out if you have any questions or would like to collaborate.</p>
+                        <div class="contact-links">
+                            <a href="mailto:tonyctyy@gmail.com" class="contact-link">
+                                <span>📧</span>
+                                <span>tonyctyy@gmail.com</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tonyctyy/" class="contact-link">
+                                <span>💼</span>
+                                <span>Tony Yuen Yeung CHAN</span>
+                            </a>
+                            <a href="https://github.com/tonyctyy" class="contact-link">
+                                <span>🔗</span>
+                                <span>github.com/tonyctyy</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !menuBtn.contains(event.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+
+        // Set active nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
