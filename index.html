@@ -45,57 +45,75 @@
             <div class="content-wrapper">
                 <!-- Hero Section -->
                 <section class="hero fade-in">
-                    <h1>Welcome to My Portfolio</h1>
-                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                    <h1>Tony Chan</h1>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
                         Decision Analytics & AI Student at HKUST
                     </p>
-                </section>
-
-                <!-- About Me Section -->
-                <section class="section fade-in">
-                    <div class="section-header">
-                        <h2>About Me</h2>
-                    </div>
-                    <div class="card">
-                        <p style="font-size: 1.125rem; line-height: 1.7;">
-                            I am a final-year student at the Hong Kong University of Science and Technology, pursuing a Bachelor of Decision Analytics with an Extended Major in Artificial Intelligence. My academic journey has provided me with a strong foundation in financial modeling, machine learning, and various programming languages.
-                        </p>
-                        <p style="font-size: 1.125rem; line-height: 1.7;">
-                            I have actively engaged in projects that bridge theory and practice, allowing me to apply my knowledge to real-world challenges. As a highly adaptable learner and problem-solver, I am passionate about using technology to drive innovative solutions.
-                        </p>
+                    <p style="font-size: 1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                        Passionate about using technology to drive innovative solutions through machine learning, financial modeling, and full-stack development.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <a href="#projects" class="btn btn-primary" style="margin-right: 1rem;">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
                     </div>
                 </section>
 
-                <!-- Large-Scale Projects Section -->
+                <!-- Quick Stats -->
                 <section class="section fade-in">
+                    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                        <div class="card" style="text-align: center; padding: 1.5rem;">
+                            <h3 style="margin: 0; color: var(--accent-color); font-size: 2rem;">4+</h3>
+                            <p style="margin: 0.5rem 0 0; color: var(--text-muted);">Projects Completed</p>
+                        </div>
+                        <div class="card" style="text-align: center; padding: 1.5rem;">
+                            <h3 style="margin: 0; color: var(--accent-color); font-size: 2rem;">2</h3>
+                            <p style="margin: 0.5rem 0 0; color: var(--text-muted);">Large-Scale Systems</p>
+                        </div>
+                        <div class="card" style="text-align: center; padding: 1.5rem;">
+                            <h3 style="margin: 0; color: var(--accent-color); font-size: 2rem;">5+</h3>
+                            <p style="margin: 0.5rem 0 0; color: var(--text-muted);">Technologies Mastered</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Projects Section -->
+                <section class="section fade-in" id="projects">
                     <div class="section-header">
-                        <h2>Large-Scale Projects</h2>
+                        <h2>Featured Projects</h2>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                            A selection of my most impactful work in AI, web development, and data science
+                        </p>
                     </div>
                     <div class="card-grid">
                         <div class="card">
+                            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 120px; border-radius: 0.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                                <span style="font-size: 2rem;">🤖</span>
+                            </div>
                             <h3 style="margin-top: 0; color: var(--accent-color);">Content Recommendation System</h3>
-                            <p style="color: var(--text-muted); margin-bottom: 1rem;">Ongoing - FYP Project</p>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Ongoing - FYP Project</p>
                             <p>
-                                My final year project focused on developing a content recommendation system to address common challenges like data sparsity and the cold-start problem.
+                                Advanced ML system addressing data sparsity and cold-start problems in recommendation engines.
                             </p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Machine Learning</span>
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Recommendation Systems</span>
+                                <span class="tech-tag">Deep Learning</span>
                             </div>
                             <a href="content-recommendation.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
                         </div>
                         
                         <div class="card">
+                            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 120px; border-radius: 0.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                                <span style="font-size: 2rem;">⭐</span>
+                            </div>
                             <h3 style="margin-top: 0; color: var(--accent-color);">Star Planner</h3>
-                            <p style="color: var(--text-muted); margin-bottom: 1rem;">Jun 2023 - Jan 2024</p>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Jun 2023 - Jan 2024</p>
                             <p>
-                                A startup web app designed to streamline academic coaching processes with comprehensive tools for educators and students.
+                                Full-stack web application streamlining academic coaching with comprehensive analytics.
                             </p>
                             <div class="tech-stack">
                                 <span class="tech-tag">React.js</span>
                                 <span class="tech-tag">Django</span>
-                                <span class="tech-tag">MySQL</span>
                                 <span class="tech-tag">Azure</span>
                             </div>
                             <a href="star-planner.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
@@ -103,49 +121,64 @@
                     </div>
                 </section>
 
-                <!-- Small-Scale Projects Section -->
+                <!-- All Projects Section -->
                 <section class="section fade-in">
                     <div class="section-header">
-                        <h2>Small-Scale Projects</h2>
+                        <h2>All Projects</h2>
                     </div>
                     <div class="card-grid">
                         <div class="card">
-                            <h3 style="margin-top: 0; color: var(--accent-color);">Web Crawler</h3>
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Web Crawler & Search Engine</h3>
                             <p style="color: var(--text-muted); margin-bottom: 1rem;">Mar 2024 - May 2024</p>
                             <p>
-                                A Java-based web crawler with indexing and search functionalities, implementing BFS algorithms and vector space models.
+                                Java-based search engine with BFS crawling, indexing, and vector space ranking.
                             </p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Java</span>
                                 <span class="tech-tag">Apache Tomcat</span>
                                 <span class="tech-tag">JDBM</span>
                             </div>
-                            <a href="web-crawler.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
+                            <a href="web-crawler.html" class="btn btn-outline" style="margin-top: 1rem;">View Project</a>
                         </div>
                         
                         <div class="card">
-                            <h3 style="margin-top: 0; color: var(--accent-color);">Stock Prediction</h3>
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Stock Prediction with Sentiment</h3>
                             <p style="color: var(--text-muted); margin-bottom: 1rem;">May 2024</p>
                             <p>
-                                A machine learning project integrating sentiment analysis with financial data for enhanced stock prediction accuracy.
+                                ML model integrating sentiment analysis with financial data for enhanced prediction.
                             </p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">ML</span>
-                                <span class="tech-tag">Sentiment Analysis</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Finance</span>
                             </div>
-                            <a href="stock-prediction.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
+                            <a href="stock-prediction.html" class="btn btn-outline" style="margin-top: 1rem;">View Project</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Me Section (Condensed) -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            Final-year <strong>Decision Analytics & AI</strong> student at HKUST with expertise in machine learning, financial modeling, and full-stack development. I bridge theory and practice through impactful projects that solve real-world challenges.
+                        </p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#contact" class="btn btn-secondary">Let's Connect</a>
                         </div>
                     </div>
                 </section>
 
                 <!-- Contact Section -->
-                <section class="section fade-in">
+                <section class="section fade-in" id="contact">
                     <div class="section-header">
-                        <h2>Contact Me</h2>
+                        <h2>Get In Touch</h2>
                     </div>
                     <div class="card">
-                        <p style="margin-bottom: 1.5rem;">Feel free to reach out if you have any questions or would like to collaborate.</p>
+                        <p style="margin-bottom: 1.5rem;">Feel free to reach out for collaboration opportunities or just to say hello!</p>
                         <div class="contact-links">
                             <a href="mailto:tonyctyy@gmail.com" class="contact-link">
                                 <span>📧</span>
