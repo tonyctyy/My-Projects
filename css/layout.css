@@ -5,7 +5,9 @@
 
 /* Sidebar */
 .sidebar {
-  width: 280px;
+  width: 25%; /* Changed from 280px to 25% */
+  max-width: 400px; /* Optional: set a maximum width */
+  min-width: 250px; /* Optional: set a minimum width */
   background-color: var(--secondary-bg);
   border-right: 1px solid var(--border-color);
   position: fixed;
@@ -13,7 +15,17 @@
   overflow-y: auto;
   z-index: 1000;
   transition: transform 0.3s ease;
+  
+  /* Hide scrollbar completely */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 
 .sidebar-header {
   padding: 2rem 1.5rem;
@@ -62,7 +74,7 @@
 /* Main Content */
 .main-content {
   flex: 1;
-  margin-left: 280px;
+  margin-left: 25%;
   min-height: 100vh;
 }
 
@@ -85,11 +97,49 @@
   padding: 0.75rem;
   border-radius: 0.5rem;
   cursor: pointer;
+
+  /* Make it more circular/square */
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  
+  /* Add smooth transitions */
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu-btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+/* When sidebar is open, transform the button */
+.mobile-menu-btn.active {
+  left: calc(25% - 60px); /* Position relative to sidebar width */
+  background-color: var(--text-muted); /* Less eye-catching gray color */
+}
+
+.mobile-menu-btn.active:hover {
+  background-color: var(--text-secondary); /* Slightly lighter on hover */
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   .sidebar {
+    width: 75%; /* On mobile, make it 75% of screen width */
+    max-width: none; /* Remove max-width constraint on mobile */
+    min-width: none; /* Remove min-width constraint on mobile */
     transform: translateX(-100%);
+    /* Ensure no scrollbar on mobile */
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none;
   }
   
   .sidebar.open {
@@ -101,10 +151,18 @@
   }
   
   .mobile-menu-btn {
-    display: block;
+    display: flex;
+  }
+
+  .mobile-menu-btn.active {
+    left: calc(75% - 60px); /* Adjust for mobile sidebar width */
   }
   
   .content-wrapper {
     padding: 4rem 1rem 2rem;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
   }
 }
