@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}Risk Assessment - Robo-Advisor Demo{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    <h5 class="mb-0"><i class="bi bi-clipboard-check"></i> Investment Profile Assessment</h5>
+  </div>
+  <div class="card-body">
+    <div class="assessment-container">
+      <!-- Step Indicators -->
+      <div class="steps-container">
+        <div class="step active">1</div>
+        <div class="step">2</div>
+        <div class="step">3</div>
+        <div class="step">4</div>
+      </div>
+      
+      <!-- Step 1: Personal Investment Goals -->
+      <div id="step1" class="assessment-step">
+        <h4>Personal Investment Goals</h4>
+        <p>Please provide information about your investment objectives.</p>
+        <div class="mb-4">
+          <label class="form-label">What is your primary investment goal?</label>
+          <div class="custom-select">
+            <select id="investmentGoal">
+              <option value="growth">Growth</option>
+              <option value="income">Income</option>
+              <option value="preservation">Capital Preservation</option>
+              <option value="balanced">Balanced Growth & Income</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Investment Time Horizon</label>
+          <div class="option-picker">
+            <input type="radio" id="horizon1" name="timeHorizon" value="short">
+            <label for="horizon1"> A few months to 1 year</label>
+            <input type="radio" id="horizon2" name="timeHorizon" value="medium">
+            <label for="horizon2"> 2 year to 3 years</label>
+            <input type="radio" id="horizon3" name="timeHorizon" value="long">
+            <label for="horizon3"> 4 to 5 years</label>
+            <input type="radio" id="horizon4" name="timeHorizon" value="verylong">
+            <label for="horizon4"> Over 5 years</label>
+          </div>
+        </div>
+        <div class="form-nav-buttons">
+          <div></div>
+          <button class="btn btn-primary" onclick="goToStep(2)">Next <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Step 2: Risk Tolerance -->
+      <div id="step2" class="assessment-step" style="display: none;">
+        <h4>Risk Tolerance</h4>
+        <p>Please indicate your comfort level with investment risk.</p>
+        <div class="mb-4">
+          <label class="form-label">Risk Tolerance Level</label>
+          <div class="range-slider">
+            <input type="range" id="riskTolerance" min="1" max="5" step="1" value="3">
+            <div class="range-values">
+              <span>Very Low</span>
+              <span>Low</span>
+              <span>Moderate</span>
+              <span>High</span>
+              <span>Very High</span>
+            </div>
+            <p class="text-center mt-2">Your selection: <span id="riskTolerance-value">3</span></p>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">If your investment lost 20% of its value in one month, what would you do?</label>
+          <div class="option-picker">
+            <input type="radio" id="reaction1" name="marketReaction" value="sell">
+            <label for="reaction1">Sell everything</label>
+            <input type="radio" id="reaction2" name="marketReaction" value="sellsome">
+            <label for="reaction2">Sell some</label>
+            <input type="radio" id="reaction3" name="marketReaction" value="hold">
+            <label for="reaction3">Hold</label>
+            <input type="radio" id="reaction4" name="marketReaction" value="buymore">
+            <label for="reaction4">Buy more</label>
+          </div>
+        </div>
+        <div class="form-nav-buttons">
+          <button class="btn btn-outline-secondary" onclick="goToStep(1)"><i class="bi bi-arrow-left"></i> Back</button>
+          <button class="btn btn-primary" onclick="goToStep(3)">Next <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Step 3: Financial Situation -->
+      <div id="step3" class="assessment-step" style="display: none;">
+        <h4>Financial Situation</h4>
+        <p>Please provide information about your current financial status.</p>
+        <div class="mb-4">
+          <label class="form-label">Annual Income</label>
+          <div class="custom-select">
+            <select id="annualIncome">
+              <option value="under50k">Under $50,000</option>
+              <option value="50to100k">$50,000 - $100,000</option>
+              <option value="100to200k">$100,000 - $200,000</option>
+              <option value="over200k">Over $200,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Liquid Assets Available for Investment</label>
+          <div class="custom-select">
+            <select id="liquidAssets">
+              <option value="under50k">Under $50,000</option>
+              <option value="50to100k">$50,000 - $100,000</option>
+              <option value="100to200k">$100,000 - $200,000</option>
+              <option value="over200k">Over $200,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-nav-buttons">
+          <button class="btn btn-outline-secondary" onclick="goToStep(2)"><i class="bi bi-arrow-left"></i> Back</button>
+          <button class="btn btn-primary" onclick="goToStep(4)">Next <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Step 4: Investment Preferences -->
+      <div id="step4" class="assessment-step" style="display: none;">
+        <h4>Investment Preferences</h4>
+        <p>Please indicate your preferences for portfolio customization.</p>
+        <div class="mb-4">
+          <label class="form-label">Target Annual Return</label>
+          <div class="range-slider">
+            <input type="range" id="targetReturn" min="4" max="15" step="1" value="8">
+            <div class="range-values">
+              <span>4%</span>
+              <span>8%</span>
+              <span>12%</span>
+              <span>15%</span>
+            </div>
+            <p class="text-center mt-2">Your selection: <span id="targetReturn-value">8</span>%</p>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Preferred Rebalancing Period</label>
+          <div class="custom-select">
+            <select id="rebalancePeriod">
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="biannually">Bi-annually</option>
+              <option value="annually">Annually</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-nav-buttons">
+          <button class="btn btn-outline-secondary" onclick="goToStep(3)"><i class="bi bi-arrow-left"></i> Back</button>
+          <button class="btn btn-primary" onclick="completeAssessment()">Complete <i class="bi bi-check2"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/assessment.js') }}"></script>
+<script>
+  // This function transfers control to portfolio.js after completing assessment.
+  function completeAssessment() {
+    const assessmentData = {
+      investmentGoal: document.getElementById('investmentGoal').value,
+      timeHorizon: document.querySelector('input[name="timeHorizon"]:checked')?.value,
+      riskTolerance: document.getElementById('riskTolerance').value,
+      marketReaction: document.querySelector('input[name="marketReaction"]:checked')?.value,
+      annualIncome: document.getElementById('annualIncome').value,
+      liquidAssets: document.getElementById('liquidAssets').value,
+      targetReturn: document.getElementById('targetReturn').value,
+      rebalancePeriod: document.getElementById('rebalancePeriod').value
+    };
+    const missingFields = [];
+    for (const key in assessmentData) {
+      if (!assessmentData[key]) {
+        missingFields.push(key);
+      }
+    }
+    if (missingFields.length > 0) {
+      alert("Please complete all required fields before proceeding.");
+      return;
+    }
+    saveAssessment(assessmentData);
+    window.location.href = "/";
+  }
+</script>
+{% endblock %}

@@ -14,31 +14,7 @@
     
     <div class="app-container">
         <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2 class="sidebar-title">Tony Chan</h2>
-                <p style="color: var(--text-muted); font-size: 0.875rem;">Decision Analytics & AI</p>
-            </div>
-            
-            <div class="sidebar-nav">
-                <div class="nav-section">
-                    <div class="nav-section-title">Portfolio</div>
-                    <a href="index.html" class="nav-link active">Home</a>
-                </div>
-                
-                <div class="nav-section">
-                    <div class="nav-section-title">Large Projects</div>
-                    <a href="content-recommendation.html" class="nav-link">Content Recommendation</a>
-                    <a href="star-planner.html" class="nav-link">Star Planner</a>
-                </div>
-                
-                <div class="nav-section">
-                    <div class="nav-section-title">Small Projects</div>
-                    <a href="web-crawler.html" class="nav-link">Web Crawler</a>
-                    <a href="stock-prediction.html" class="nav-link">Stock Prediction</a>
-                </div>
-            </div>
-        </nav>
+        <div id="sidebar-container"></div>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -47,7 +23,7 @@
                 <section class="hero fade-in">
                     <h1>Tony Chan</h1>
                     <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                        Decision Analytics & AI Student at HKUST
+                        Decision Analytics & AI Graduate at HKUST
                     </p>
                     <p style="font-size: 1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
                         Passionate about using technology to drive innovative solutions through machine learning, financial modeling, and full-stack development.
@@ -90,7 +66,7 @@
                                 <span style="font-size: 2rem;">🤖</span>
                             </div>
                             <h3 style="margin-top: 0; color: var(--accent-color);">Content Recommendation System</h3>
-                            <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Ongoing - FYP Project</p>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">July 2024 - Apr 2025</p>
                             <p>
                                 Advanced ML system addressing data sparsity and cold-start problems in recommendation engines.
                             </p>
@@ -112,9 +88,11 @@
                                 Full-stack web application streamlining academic coaching with comprehensive analytics.
                             </p>
                             <div class="tech-stack">
-                                <span class="tech-tag">React.js</span>
                                 <span class="tech-tag">Django</span>
+                                <span class="tech-tag">React.js</span>
                                 <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Gen-AI</span>
                             </div>
                             <a href="star-planner.html" class="btn btn-primary" style="margin-top: 1rem;">View Project</a>
                         </div>
@@ -128,6 +106,34 @@
                     </div>
                     <div class="card-grid">
                         <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Robo-Advisor Portfolio Optimization</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem;">Apr 2025 - May 2025</p>
+                            <p>
+                                Automated portfolio recommendations with utility maximization and user personalization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Portfolio Optimization</span>
+                            </div>
+                            <a href="robo-advisor.html" class="btn btn-outline" style="margin-top: 1rem;">View Project</a>
+                        </div>
+
+                        <div class="card">
+                            <h3 style="margin-top: 0; color: var(--accent-color);">Stock Prediction with Sentiment</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1rem;">May 2024</p>
+                            <p>
+                                ML model integrating sentiment analysis with financial data for enhanced prediction.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Finance Modeling</span>
+                            </div>
+                            <a href="stock-sentiment.html" class="btn btn-outline" style="margin-top: 1rem;">View Project</a>
+                        </div>
+
+                        <div class="card">
                             <h3 style="margin-top: 0; color: var(--accent-color);">Web Crawler & Search Engine</h3>
                             <p style="color: var(--text-muted); margin-bottom: 1rem;">Mar 2024 - May 2024</p>
                             <p>
@@ -140,20 +146,6 @@
                             </div>
                             <a href="web-crawler.html" class="btn btn-outline" style="margin-top: 1rem;">View Project</a>
                         </div>
-                        
-                        <div class="card">
-                            <h3 style="margin-top: 0; color: var(--accent-color);">Stock Prediction with Sentiment</h3>
-                            <p style="color: var(--text-muted); margin-bottom: 1rem;">May 2024</p>
-                            <p>
-                                ML model integrating sentiment analysis with financial data for enhanced prediction.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">NLP</span>
-                                <span class="tech-tag">Finance</span>
-                            </div>
-                            <a href="stock-prediction.html" class="btn btn-outline" style="margin-top: 1rem;">View Project</a>
-                        </div>
                     </div>
                 </section>
 
@@ -164,7 +156,7 @@
                     </div>
                     <div class="card">
                         <p style="font-size: 1.125rem; line-height: 1.7;">
-                            Final-year <strong>Decision Analytics & AI</strong> student at HKUST with expertise in machine learning, financial modeling, and full-stack development. I bridge theory and practice through impactful projects that solve real-world challenges.
+                            <strong>Decision Analytics & AI</strong> graduate at HKUST with expertise in machine learning, financial modeling, and full-stack development. I bridge theory and practice through impactful projects that solve real-world challenges.
                         </p>
                         <div style="margin-top: 1.5rem;">
                             <a href="#contact" class="btn btn-secondary">Let's Connect</a>
@@ -199,36 +191,7 @@
         </main>
     </div>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('open');
-        }
-
-        // Close sidebar when clicking outside on mobile
-        document.addEventListener('click', function(event) {
-            const sidebar = document.getElementById('sidebar');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            
-            if (window.innerWidth <= 768 && 
-                !sidebar.contains(event.target) && 
-                !menuBtn.contains(event.target)) {
-                sidebar.classList.remove('open');
-            }
-        });
-
-        // Set active nav link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <!-- Include sidebar script -->
+    <script src="js/sidebar.js"></script>
 </body>
 </html>

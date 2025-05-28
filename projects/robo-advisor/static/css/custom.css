@@ -1,0 +1,432 @@
+:root {
+    --primary-blue: #0055b3;
+    --dark-bg: #121212;
+    --card-bg: #1E1E1E;
+    --card-header: #242424;
+    --text-primary: #E0E0E0;
+    --text-secondary: #A0A0A0;
+  }
+  
+  /* Use a dark charcoal background for a balanced dark theme */
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.015em;
+  }
+  
+  /* Use the accent color sparingly */
+  a, .navbar-brand, .btn-accent {
+    color: var(--primary-blue);
+  }
+  
+  /* Navbar adjustments */
+  .navbar {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+  .navbar-brand,
+  .nav-link {
+    color: var(--text-primary) !important;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-blue) !important;
+    transition: color 0.2s ease;
+  }
+  
+  /* Button Styling */
+  .btn {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #004494;
+
+    
+    border-color: #004494;
+    box-shadow: 0 0 0 0.25rem rgba(0, 85, 179, 0.25);
+  }
+  
+  /* Card component styling for a balanced look */
+  .card {
+    background-color: var(--card-bg);
+    border: none;
+    color: var(--text-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .card-header {
+    background-color: var(--card-header);
+    border-bottom: 1px solid #333;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .card-body {
+    background-color: var(--card-bg);
+  }
+  
+  /* Preformatted text area */
+  pre {
+    background-color: var(--card-header);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: var(--text-primary);
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* Spinner/Loading */
+  .spinner-border {
+    color: var(--primary-blue);
+  }
+  
+  /* Placeholder styling for charts */
+  .placeholder {
+    background-color: var(--card-header);
+    border-radius: 5px;
+  }
+  
+  /* Mobile specific styles */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    
+    h5 {
+      font-size: 1.1rem;
+    }
+    
+    .btn-lg {
+      font-size: 1.1rem;
+      padding: 0.8rem 1rem;
+    }
+    
+    .container {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    
+    pre {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    padding: 15px 0;
+    font-size: 0.8rem;
+    margin-top: 30px;
+  }
+
+  /* Assessment Form Styling */
+.assessment-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Step indicators */
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .steps-container::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #333;
+    z-index: 1;
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .step.active {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+  }
+  
+  .step.completed {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  /* Horizontal sliders */
+  .range-slider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .range-slider input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    background: #333;
+    outline: none;
+  }
+  
+  .range-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+    cursor: pointer;
+  }
+  
+  .range-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Option picker (radio buttons styled as options) */
+  .option-picker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .option-picker label {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .option-picker input[type="radio"] {
+    display: none;
+  }
+  
+  .option-picker input[type="radio"]:checked + label {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    /* color: var(--text-primary);
+    transition: background-color 0.2s ease, border-color 0.2s ease; */
+  }
+  
+  /* Custom dropdown */
+  .custom-select {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .custom-select select {
+    display: none;
+  }
+  
+  .select-selected {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .select-selected:after {
+    content: '\25BC';
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    font-size: 12px;
+  }
+  
+  .select-items {
+    position: absolute;
+    background-color: var(--card-bg);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #333;
+    border-radius: 0 0 5px 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    /* display: none; */
+  }
+
+  .select-items.select-hide {
+    display: none;
+  }
+  
+  .select-items div {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .select-items div:hover {
+    background-color: rgba(0, 85, 179, 0.2);
+  }
+  
+  .select-hide {
+    display: none;
+  }
+  
+  /* Expandable sections */
+  .expandable-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .expandable-header {
+    padding: 12px 15px;
+    background-color: var(--card-header);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expandable-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+  }
+  
+  .expandable-content.active {
+    padding: 15px;
+    max-height: 500px;
+  }
+  
+  /* Form navigation buttons */
+  .form-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .option-picker {
+      flex-direction: column;
+    }
+    
+    .option-picker label {
+      width: 100%;
+    }
+    
+    .form-nav-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .form-nav-buttons button {
+      width: 100%;
+    }
+  }
+
+  /* Table styling for dark theme */
+.table-dark {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--card-header);
+}
+
+.table-dark th,
+.table-dark td {
+  border-color: #333;
+  padding: 0.5rem;
+  white-space: nowrap;
+  text-align: center; 
+}
+
+.table-dark thead th {
+  background-color: var(--card-header);
+  border-bottom: 2px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-responsive {
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+/* Custom scrollbar for tables */
+.table-responsive::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Mobile adjustments for tables */
+@media (max-width: 768px) {
+  .table-dark th,
+  .table-dark td {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+  
+  .table-responsive {
+    max-height: 250px;
+  }
+}

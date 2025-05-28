@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo-Advisor Portfolio Optimization | Tony Chan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero fade-in">
+                    <h1>Robo-Advisor Portfolio Optimization</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                        Automated Portfolio Recommendations with Utility Maximization
+                    </p>
+                </section>
+
+                <!-- Overview -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Overview</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            This project develops a comprehensive Robo-Advisor demo that helps users generate optimized stock portfolios based on their risk preferences and return targets. The system simulates traditional utility-maximization strategies and implements a front-end tool that visualizes optimized portfolios and performance metrics.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Objectives -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Introduction and Objectives</h2>
+                    </div>
+                    <div class="card">
+                        <p>The Robo-Advisor module aims to automate personalized portfolio recommendations using conventional investment principles:</p>
+                        <ul class="feature-list">
+                            <li><strong>Utility Maximization</strong> - Simulates investor preferences using a utility function based on risk and return</li>
+                            <li><strong>Mean-Variance Optimization (MVO)</strong> - Constructs portfolios to maximize expected utility</li>
+                            <li><strong>User Personalization</strong> - Supports varying risk preferences and return targets via a web interface</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem;">The final system demonstrates how technical parameter choices and behavioral biases can impact investment outcomes.</p>
+                    </div>
+                </section>
+
+                <!-- Methodology -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Methodology</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">1. Utility-Based Portfolio Construction & Configuration</h3>
+                        <p>We model the investor's objective using a utility function for portfolio optimization:</p>
+                        <img src="screenshots/robo-advisor/maximizing-utility-function.png" alt="Maximizing Utility Function" class="project-image">
+                        
+                        <p>Various combinations of technical parameters are tested to simulate portfolio configurations:</p>
+                        <img src="screenshots/robo-advisor/list-of-technical-parameters.png" alt="List of Technical Parameters" class="project-image">
+                        
+                        <p style="margin-top: 1.5rem;">A scatter plot shows the top 100 performers out of 5,000 sampled portfolios, with comparisons to the S&P 500 and equal-weighted portfolios based on Sharpe ratio. For detailed results and analysis, please refer to the <a href="doc/IDEA4500-Final-Report.pdf">IEDA4500 Final Report</a>.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">2. User Behavior Simulation & Assessment</h3>
+                        <p>To bridge the gap between technical parameters and user-friendly interactions, a comprehensive questionnaire was designed. The assessment covers:</p>
+                        <ul class="feature-list">
+                            <li><strong>Personal Investment Goals</strong> - Growth strategy and time horizon</li>
+                            <li><strong>Risk Tolerance</strong> - Comfort level with market fluctuations (conservative to aggressive)</li>
+                            <li><strong>Financial Situation</strong> - Saving habits, cash flow, and capital base</li>
+                            <li><strong>Investment Preferences</strong> - Target return, rebalance period, and diversification</li>
+                        </ul>
+                        
+                        <p>A parameter index table is initialized using technical parameters, with user responses mapped to derive portfolio configurations:</p>
+                        <img src="screenshots/robo-advisor/parameter-index-table.png" alt="Parameter Index Table" class="project-image">
+                        
+                        <p>The detailed mapping rules can be found in the <a href="doc/IDEA4500-Final-Report.pdf">IEDA4500 Final Report</a>.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">3. App Demonstration</h3>
+                        <p>New users complete an intuitive questionnaire to initialize technical parameters:</p>
+                        <div class="mobile-screenshots">
+                            <img src="screenshots/robo-advisor/app-demo-1.png" alt="App Questionnaire" class="project-image mobile">
+                        </div>
+                        
+                        <p>Users can fine-tune settings based on their investment insights:</p>
+                        <div class="mobile-screenshots">
+                            <img src="screenshots/robo-advisor/app-demo-2.png" alt="Customized Parameters" class="project-image mobile">
+                        </div>
+                        
+                        <p>Portfolio performance is visualized across rebalance periods:</p>
+                        <div class="mobile-screenshots">
+                            <img src="screenshots/robo-advisor/app-demo-3.png" alt="Portfolio Visualization" class="project-image mobile">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technology Stack -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Technology Stack</h2>
+                    </div>
+                    <div class="card">
+                        <div class="tech-stack" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--text-primary);">Backend:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Flask</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Frontend:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Static HTML/JS</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Deployment:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">AWS Amplify</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary);">Analytics:</strong>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Python</span>
+                                <span class="tech-tag" style="margin-left: 0.5rem;">Portfolio Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Limitations and Improvements -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Limitations and Potential Improvements</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="feature-list">
+                            <li><strong>Sensitivity Analysis</strong> - More systematic evaluation of how each parameter impacts performance is needed</li>
+                            <li><strong>Adaptive Tuning</strong> - Use of heuristics or advanced optimization (e.g., evolutionary algorithms) could improve portfolio quality</li>
+                            <li><strong>Data Expansion</strong> - The current stock universe is limited. Including more assets or asset classes would improve real-world realism</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Links -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Repository</h2>
+                    </div>
+                    <div class="card">
+                        <div style="margin-bottom: 2rem;">
+                            <p>Find the source code and report:</p>
+                            <a href="https://github.com/tonyctyy/My-Projects/tree/main/projects/robo-advisor" class="btn btn-primary" style="margin-top: 0.5rem;">
+                                View Repository on GitHub
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h3>License</h3>
+                            <p style="color: var(--text-muted);">This project is open-source and available under the MIT License.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation -->
+                <section class="section fade-in">
+                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include sidebar script -->
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

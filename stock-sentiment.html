@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction with Sentiment Analysis | Tony Chan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero fade-in">
+                    <h1>Stock Prediction with Sentiment Analysis</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                        Machine Learning & NLP for Enhanced Portfolio Performance • May 2024
+                    </p>
+                </section>
+
+                <!-- Overview -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Overview</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            This project integrates sentiment analysis with stock market data for predictive modeling, aiming to enhance portfolio performance through machine learning models. The system tests various models to predict stock price movements and adjusts portfolios based on these predictions.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Objectives -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Introduction and Objectives</h2>
+                    </div>
+                    <div class="card">
+                        <p>The project combines sentiment analysis with stock market data to predict price movements with the following objectives:</p>
+                        <ul class="feature-list">
+                            <li><strong>Sentiment Analysis as a Feature</strong> - Incorporate sentiment analysis to predict price movements</li>
+                            <li><strong>Machine Learning Models</strong> - Test different models to forecast overall stock movement during the next rebalance window</li>
+                            <li><strong>Portfolio Adjustment</strong> - Adjust portfolio weights based on predictions, focusing on True Positive and True Negative outcomes</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem;">Sentiment analysis is used as a market indicator to provide quantitative measures of market sentiment, enhancing profit opportunities particularly in short-term trading scenarios.</p>
+                    </div>
+                </section>
+
+                <!-- Methodology -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Methodology</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <p>The methodology consists of several key steps:</p>
+                        <ul class="feature-list">
+                            <li><strong>Feature Processing/Selection</strong> - Extract relevant features from stock data and sentiment scores</li>
+                            <li><strong>Model Training</strong> - Train machine learning models including Logistic Regression, Random Forest, and AdaBoost</li>
+                            <li><strong>Portfolio Adjustment</strong> - Adjust portfolio weights based on model predictions</li>
+                            <li><strong>Backtesting</strong> - Evaluate performance over multiple rebalance windows</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Sentiment Analysis on Stock-Related Tweets</h3>
+                        <ul class="feature-list">
+                            <li><strong>Data Filtering</strong> - Stocks with fewer than 500 tweets are filtered out</li>
+                            <li><strong>Sentiment Calculation</strong> - Sentiment scores calculated using SentimentIntensityAnalyzer from nltk.sentiment.vader</li>
+                            <li><strong>Feature Engineering</strong> - Two feature sets incorporating stock data, sentiment scores, technical indicators, and momentum measures</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Model Features Selection</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong>Feature Set 1:</strong> Stock Data, Sentiment Score, Log Return, Moving Average (7 and 14 days)
+                        </div>
+                        <div>
+                            <strong>Feature Set 2:</strong> Feature Set 1 + MACD, 14SD, Upper/Lower Band, Log Momentum
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Portfolio Design</h3>
+                        <p>A Mean-Variance Optimization (MVO) portfolio is designed as the benchmark portfolio:</p>
+                        <img src="screenshots/stock-sentiment/portfolio-optimization.png" alt="Portfolio Optimization" class="project-image">
+                    </div>
+                </section>
+
+                <!-- Model Results -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Model Selection and Results</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Portfolio Configuration</h3>
+                        <ul class="feature-list">
+                            <li><strong>Rebalance period:</strong> 10 days</li>
+                            <li><strong>Lookback period:</strong> 50 days (for MVO portfolio)</li>
+                            <li><strong>Backtesting:</strong> Conducted over 23 windows (230 days)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Using MVO as Benchmark Portfolio</h3>
+                        <img src="screenshots/stock-sentiment/adjusting-portfolio-weight.png" alt="Adjusting Portfolio Weight - MVO" class="project-image">
+                        <p><strong>Selected Model:</strong> Logistic Regression (LR)</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Using PCA for Dimensionality Reduction</h3>
+                        <img src="screenshots/stock-sentiment/adjusting-portfolio-weight-PCA.png" alt="Adjusting Portfolio Weight - PCA" class="project-image">
+                        <p><strong>Selected Model:</strong> Random Forest (RF)</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-top: 0;">Using Equal Weights Portfolio (EWP) as Benchmark</h3>
+                        <img src="screenshots/stock-sentiment/adjusting-portfolio-weight-EWP.png" alt="Adjusting Portfolio Weight - EWP" class="project-image">
+                    </div>
+                </section>
+
+                <!-- Technology Stack -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Technology Stack</h2>
+                    </div>
+                    <div class="card">
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">NLTK</span>
+                            <span class="tech-tag">Sentiment Analysis</span>
+                            <span class="tech-tag">Portfolio Optimization</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Insights -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Insights and Results</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="feature-list">
+                            <li><strong>Performance:</strong> Certain models can slightly improve annual return and Sharpe Ratio while maintaining similar variance</li>
+                            <li><strong>Prediction Accuracy:</strong> While Logistic Regression and Random Forest may not have the highest prediction accuracy, they demonstrate strong performance metrics, suggesting other factors beyond accuracy influence results</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Limitations -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Limitations and Potential Improvements</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="feature-list">
+                            <li><strong>Sentiment Data:</strong> The Kaggle dataset may be limited. Using Twitter's API for more targeted data retrieval is recommended</li>
+                            <li><strong>Machine Learning Models:</strong> Current models have limitations in prediction accuracy. Exploring advanced models such as GANs may improve results</li>
+                            <li><strong>Weight Adjustment:</strong> More robust formulas to favor matching cases and combining price prediction to optimize MVO portfolios could be beneficial</li>
+                            <li><strong>Rebalance Period:</strong> A shorter rebalance period may be more effective, as market sentiment can influence prices over brief periods. Day-trading or 3-day trading strategies are recommended</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Links -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Repository</h2>
+                    </div>
+                    <div class="card">
+                        <div style="margin-bottom: 2rem;">
+                            <p>Find the source code and detailed analysis:</p>
+                            <a href="https://github.com/tonyctyy/My-Projects/tree/main/projects/stock-sentiment/stock-sentiment.ipynb" class="btn btn-primary" style="margin-top: 0.5rem;">
+                                View Jupyter Notebook
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h3>License</h3>
+                            <p style="color: var(--text-muted);">This project is open-source and available under the MIT License.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation -->
+                <section class="section fade-in">
+                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include sidebar script -->
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

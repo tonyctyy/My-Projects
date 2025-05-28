@@ -14,31 +14,7 @@
     
     <div class="app-container">
         <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2 class="sidebar-title">Tony Chan</h2>
-                <p style="color: var(--text-muted); font-size: 0.875rem;">Decision Analytics & AI</p>
-            </div>
-            
-            <div class="sidebar-nav">
-                <div class="nav-section">
-                    <div class="nav-section-title">Portfolio</div>
-                    <a href="index.html" class="nav-link">Home</a>
-                </div>
-                
-                <div class="nav-section">
-                    <div class="nav-section-title">Large Projects</div>
-                    <a href="content-recommendation.html" class="nav-link">Content Recommendation</a>
-                    <a href="star-planner.html" class="nav-link active">Star Planner</a>
-                </div>
-                
-                <div class="nav-section">
-                    <div class="nav-section-title">Small Projects</div>
-                    <a href="web-crawler.html" class="nav-link">Web Crawler</a>
-                    <a href="stock-prediction.html" class="nav-link">Stock Prediction</a>
-                </div>
-            </div>
-        </nav>
+        <div id="sidebar-container"></div>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -166,22 +142,7 @@
         </main>
     </div>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('open');
-        }
-
-        document.addEventListener('click', function(event) {
-            const sidebar = document.getElementById('sidebar');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            
-            if (window.innerWidth <= 768 && 
-                !sidebar.contains(event.target) && 
-                !menuBtn.contains(event.target)) {
-                sidebar.classList.remove('open');
-            }
-        });
-    </script>
+    <!-- Include sidebar script -->
+    <script src="js/sidebar.js"></script>
 </body>
 </html>

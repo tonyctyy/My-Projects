@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Robo-Advisor Demo{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    <h5 class="mb-0"><i class="bi bi-bar-chart-line"></i> Portfolio Analysis</h5>
+  </div>
+  <div class="card-body">
+    <p class="text-center">
+      Compute portfolio weights and view plots for both dynamic cumulative returns and original price movements.
+    </p>
+    
+    <!-- Portfolio Parameters (Expandable Section) -->
+    <div class="mb-4">
+      <div class="expandable-section">
+        <div class="expandable-header">
+          <span><i class="bi bi-sliders"></i> Portfolio Parameters</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <div class="expandable-content">
+          <div class="row g-3">
+            <!-- Rebalance Period Dropdown -->
+            <div class="col-md-6">
+              <label for="rebalancePeriod" class="form-label">Rebalance Period</label>
+              <select class="form-select" id="rebalancePeriod">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="14">14</option>
+                <option value="21">21</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+            <!-- Short Weight Slider -->
+            <div class="col-md-6">
+              <label for="shortW" class="form-label">Short Threshold (–0.3 to 0)</label>
+              <input type="range" class="form-range" id="shortW" min="-0.3" max="0" step="0.05">
+              <div class="text-center" id="shortW-value">0</div>
+            </div>
+            <!-- Long Weight Slider -->
+            <div class="col-md-6">
+              <label for="longW" class="form-label">Long Threshold (0.05 to 0.6)</label>
+              <input type="range" class="form-range" id="longW" min="0.05" max="0.6" step="0.05">
+              <div class="text-center" id="longW-value">0</div>
+            </div>
+            <!-- Total Position Slider -->
+            <div class="col-md-6">
+              <label for="totalPosition" class="form-label">Leverage (0.3 to 1.5)</label>
+              <input type="range" class="form-range" id="totalPosition" min="0.3" max="1.5" step="0.05">
+              <div class="text-center" id="totalPosition-value">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Advanced Options (Expandable Section) -->
+      <div class="expandable-section">
+        <div class="expandable-header">
+          <span><i class="bi bi-gear-fill"></i> Advanced Options</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <div class="expandable-content">
+          <div class="row g-3">
+            <!-- Long-Short Position Slider -->
+            <div class="col-md-6">
+              <label for="longShortPosition" class="form-label">Long-Short Ratio (1 to 0.6)</label>
+              <input type="range" class="form-range" id="longShortPosition" min="0.6" max="1" step="0.05">
+              <div class="text-center" id="longShortPosition-value">0</div>
+            </div>
+            <!-- Turnover Ratio Slider -->
+            <div class="col-md-6">
+              <label for="turnoverRatio" class="form-label">Turnover (0.05 to 0.3)</label>
+              <input type="range" class="form-range" id="turnoverRatio" min="0.05" max="0.3" step="0.05">
+              <div class="text-center" id="turnoverRatio-value">0</div>
+            </div>
+            <!-- Risk Tolerance Slider -->
+            <div class="col-md-6">
+              <label for="riskTolerance" class="form-label">Risk Level (0.01 to 0.2, higher risk level, less restricted portfolio)</label>
+              <input type="range" class="form-range" id="riskTolerance" min="0.01" max="0.2" step="0.02">
+            <div class="text-center" id="riskTolerance-value">0</div>
+            </div>
+            <!-- Gamma -->
+            <div class="col-md-6">
+              <label for="gamma" class="form-label">Gamma (0.25 to 3.0, higher gamma, less volatility)</label>
+              <input type="range" class="form-range" id="gamma" min="0.25" max="3.0" step="0.25">
+              <div class="text-center" id="gamma-value">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="d-grid gap-2" style="max-width: 300px; margin: 0 auto; text-align: center;">
+      <button class="btn btn-primary btn-lg" onclick="computePortfolios()">
+        <i class="bi bi-calculator"></i> Compute Portfolios
+      </button>
+    </div>
+    
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="text-center mt-4 d-none">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-2">Computing portfolios...</p>
+    </div>
+    
+    <!-- Dynamic Portfolio Plot -->
+    <div class="mt-4">
+      <div class="card">
+        <div class="card-header">Dynamic Portfolio Cumulative Return</div>
+        <div class="card-body text-center p-1">
+          <div id="plotContainer">
+            <img id="plotImage" src="" alt="Dynamic Portfolio Plot" class="img-fluid rounded d-none" />
+            <div id="plotPlaceholder" class="placeholder w-100" style="height: 200px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluation Table -->
+    <div class="mt-4">
+      <div class="card">
+        <div class="card-header">Portfolio Performance Metrics</div>
+        <div class="card-body p-1">
+          <div class="table-responsive">
+            <table id="evaluationTable" class="table table-dark table-striped">
+              <thead id="evaluationTableHead">
+                <!-- Header row will be added dynamically -->
+              </thead>
+              <tbody id="evaluationTableBody">
+                <!-- Evaluation rows will be added dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weights Table -->
+    <div class="mt-4">
+      <div class="card">
+        <div class="card-header">Portfolio Weights</div>
+        <div class="card-body p-1">
+          <div class="table-responsive">
+            <table id="weightsTable" class="table table-dark table-striped">
+              <thead id="weightsTableHead">
+                <!-- Header row will be added dynamically -->
+              </thead>
+              <tbody id="weightsTableBody">
+                <!-- Weights rows will be added dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Original Price Plot -->
+
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+<script>
+  // Initialize the slider value displays
+  function initSliderDisplays() {
+    ['shortW', 'longW', 'totalPosition', 'longShortPosition', 'turnoverRatio', 'riskTolerance', 'gamma'].forEach(function(id) {
+      const slider = document.getElementById(id);
+      const display = document.getElementById(id + '-value');
+      if (slider && display) {
+        display.textContent = slider.value;
+        slider.addEventListener('input', function() {
+          display.textContent = this.value;
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initSliderDisplays);
+</script>
+{% endblock %}
