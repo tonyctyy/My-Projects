@@ -13,10 +13,12 @@ The final system demonstrates how technical parameter choices and behavioral bia
 ## Methodology
 ### 1. Utility-Based Portfolio Construction & Configuration
 We model the investor’s objective using a utility function:
-![Maximizing Utility Function](./screenshots/robo-advisor/maximizing-utility-function.png)
+
+![Maximizing Utility Function](../../screenshots/robo-advisor/maximizing-utility-function.png)
 
 Various combinations of technical parameters are tested to simulate portfolio configurations:
-![List of Technical Parameters](./screenshots/robo-advisor/list-of-technical-parameters.png)
+
+![List of Technical Parameters](../../screenshots/robo-advisor/list-of-technical-parameters.png)
 
 Below is a scatter plot showing the top 100 performers out of 5,000 sampled portfolios, along with a comparison to the S&P 500 and an equal-weighted portfolio based on Sharpe ratio. For detailed results and analysis, please refer to the [IEDA4500 Final Report](./doc/IDEA4500-Final-Report.pdf).
 
@@ -29,19 +31,23 @@ To bridge the gap between technical parameters and user-friendly interactions, a
 - **Investment Preferences**: Target return, rebalance period, and diversification.
 
 A parameter index table is initialized using the technical parameters. User responses are then mapped to this table to derive a set of portfolio configurations.
-![Parameter Index Table](./screenshots/robo-advisor/parameter-index-table.png)
 
-The detailed rules for mapping user responses to parameter indices can be found in the same document: [IEDA4500 Final Report](./doc/IDEA4500-Final-Report.pdf).
+![Parameter Index Table](../../screenshots/robo-advisor/parameter-index-table.png)
+
+The detailed rules for mapping user responses to parameter indices can be found in the same document: [IEDA4500 Final Report](../../doc/IDEA4500-Final-Report.pdf).
 
 ### 3. App Demonstration
 New users complete the questionnaire to initialize technical parameters:
-![App Questionnaire](./screenshots/robo-advisor/app-demo-1.png)
+
+![App Questionnaire](../../screenshots/robo-advisor/app-demo-1.png)
 
 Users may further fine-tune settings based on their investment insights:
-![Customized Parameters](./screenshots/robo-advisor/app-demo-2.png)
+
+![Customized Parameters](../../screenshots/robo-advisor/app-demo-2.png)
 
 Portfolio performance is visualized across rebalance periods:
-![Portfolio Visualization](./screenshots/robo-advisor/app-demo-3.png)
+
+![Portfolio Visualization](../../screenshots/robo-advisor/app-demo-3.png)
 
 The app was deployed via **AWS Amplify** during the in-class demo. The backend is built using **Flask** and integrated with a static front end.
 

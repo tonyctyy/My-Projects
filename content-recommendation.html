@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Recommendations | Tony Chan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero fade-in">
+                    <h1>AI for Personalized Content Recommendations</h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                        Advanced ML Recommendation System • July 2024 - Apr 2025
+                    </p>
+                </section>
+
+                <!-- Introduction Video -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Introduction Video</h2>
+                    </div>
+                    <div class="card">
+                        <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-bottom: 1rem;">
+                            <iframe 
+                                src="https://www.youtube.com/embed/HjFU1mshz1I" 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 0.5rem;"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p>For a detailed overview, please watch the introduction video above, which showcases the system's features and user experience.</p>
+                    </div>
+                </section>
+
+                <!-- Project Overview -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Project Overview</h2>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 1.125rem; line-height: 1.7;">
+                            This project was undertaken as my Final Year Project (FYP) at the Hong Kong University of Science and Technology (HKUST) in 2024-25. The goal was to design and implement an advanced recommendation system capable of suggesting local businesses—such as restaurants, cafes, retail stores, and service providers—to Yelp users based on their preferences and behaviors.
+                        </p>
+                        <p style="margin-top: 1.5rem;">
+                            Unlike traditional recommendation systems, this solution was built to handle real-world complexities inherent in the Yelp dataset, which contains millions of user reviews, ratings, and business metadata. The system adopts a multi-stage architecture, integrating retrieval and ranking phases to ensure both scalability and precision.
+                        </p>
+                        
+                        <div style="margin-top: 2rem;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                                <div style="text-align: center; padding: 1rem; background-color: var(--secondary-bg); border-radius: 0.5rem;">
+                                    <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: 600;">6.9M+</div>
+                                    <div style="color: var(--text-muted); font-size: 0.875rem;">Reviews</div>
+                                </div>
+                                <div style="text-align: center; padding: 1rem; background-color: var(--secondary-bg); border-radius: 0.5rem;">
+                                    <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: 600;">150K+</div>
+                                    <div style="color: var(--text-muted); font-size: 0.875rem;">Businesses</div>
+                                </div>
+                                <div style="text-align: center; padding: 1rem; background-color: var(--secondary-bg); border-radius: 0.5rem;">
+                                    <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: 600;">1.2M+</div>
+                                    <div style="color: var(--text-muted); font-size: 0.875rem;">Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technology Stack -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Technology Stack & My Role</h2>
+                    </div>
+                    <div class="card">
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-top: 0;">Technologies Used</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                        <img src="screenshots/ai-recommendation-system/system-component.jpg" 
+                             alt="System Components" 
+                             class="project-image desktop">
+                        <div>
+                            <h3>My Role</h3>
+                            <ul class="feature-list">
+                                <li>System Design & Integration - Architected multi-stage pipeline</li>
+                                <li>Frontend Development - React-based web application</li>
+                                <li>Documentation - 40-page final report and visualizations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Project Significance -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Significance of the Project</h2>
+                    </div>
+                    <div class="card">
+                        <p style="margin-bottom: 1.5rem;">
+                            Recommendation systems are at the heart of modern digital platforms, driving user engagement and business growth. This project stands out due to its focus on addressing three pervasive challenges in recommendation systems:
+                        </p>
+                        
+                        <div style="display: grid; gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="padding: 1.5rem; background-color: var(--secondary-bg); border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
+                                <h3 style="margin: 0 0 0.5rem; color: var(--accent-color);">Data Sparsity</h3>
+                                <p style="margin: 0; color: var(--text-secondary);">
+                                    With a sparsity rate of 99.99% in the Yelp dataset, traditional methods struggle to generate meaningful recommendations.
+                                </p>
+                            </div>
+                            
+                            <div style="padding: 1.5rem; background-color: var(--secondary-bg); border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
+                                <h3 style="margin: 0 0 0.5rem; color: var(--accent-color);">Cold-Start Problem</h3>
+                                <p style="margin: 0; color: var(--text-secondary);">
+                                    New users or businesses with limited interaction histories pose a significant hurdle for personalization.
+                                </p>
+                            </div>
+                            
+                            <div style="padding: 1.5rem; background-color: var(--secondary-bg); border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
+                                <h3 style="margin: 0 0 0.5rem; color: var(--accent-color);">Long-Tail Biases</h3>
+                                <p style="margin: 0; color: var(--text-secondary);">
+                                    Popular businesses tend to dominate recommendations, leaving niche or less-reviewed options underexposed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Methodology -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Methodology</h2>
+                    </div>
+                    <div class="card">
+                        <p style="margin-bottom: 1.5rem;">
+                            The recommendation system is designed as a two-stage pipeline: <strong>Retrieval</strong> and <strong>Ranking</strong>. This modular approach ensures scalability (handling millions of candidates) and precision (delivering top-quality suggestions).
+                        </p>
+                        
+                        <img src="screenshots/ai-recommendation-system/overview-content-recommendation.jpg" 
+                             alt="Overview of Content Recommendation System" 
+                             class="project-image desktop">
+                        
+                        <p style="margin-top: 1.5rem;">
+                            The system implements various recommendation models. For instance, the Deep Structured Semantic Model (DSSM) used in the retrieval stage is a deep learning framework that maps users and businesses into a shared latent space, capturing semantic relationships and improving retrieval accuracy even in sparse datasets.
+                        </p>
+                        
+                        <img src="screenshots/ai-recommendation-system/model-design-example.jpg" 
+                             alt="DSSM Architecture" 
+                             class="project-image desktop">
+                    </div>
+                </section>
+
+                <!-- Demo Application -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Demo Application</h2>
+                    </div>
+                    <div class="card">
+                        <p style="margin-bottom: 1.5rem;">
+                            To demonstrate the system's practical utility, I developed a web application deployed on AWS for scalability and reliability.
+                        </p>
+                        
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Personalized Recommendations - Users with sufficient review history receive tailored suggestions</li>
+                            <li>Fallback Options - New or sparse users are shown recent popular items or category-based picks</li>
+                            <li>Interactive Interface - Built with React.js, featuring a clean dashboard and real-time suggestion updates</li>
+                        </ul>
+                        
+                        <h3>User Journey</h3>
+                        <img src="screenshots/ai-recommendation-system/user-flow-chart.jpg" 
+                             alt="User Journey of the Demo Application" 
+                             class="project-image desktop">
+                    </div>
+                </section>
+
+                <!-- My Contributions -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>My Contributions</h2>
+                    </div>
+                    <div class="card">
+                        <p style="margin-bottom: 1.5rem;">
+                            As a core member of the three-person team, I played a pivotal role in shaping the project. My responsibilities included:
+                        </p>
+                        
+                        <div style="display: grid; gap: 1.5rem;">
+                            <div>
+                                <h3 style="margin: 0 0 0.75rem; color: var(--accent-color);">System Design & Integration</h3>
+                                <ul style="margin: 0; padding-left: 1.5rem;">
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Architected the multi-stage pipeline, ensuring seamless interaction between retrieval and ranking components</li>
+                                    <li style="color: var(--text-secondary);">Integrated diverse models (CF, DSSM, Deep FM) into a cohesive system using Python and TensorFlow</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="margin: 0 0 0.75rem; color: var(--accent-color);">Frontend Development</h3>
+                                <ul style="margin: 0; padding-left: 1.5rem;">
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Designed and implemented the React-based web app, focusing on responsiveness and user experience</li>
+                                    <li style="color: var(--text-secondary);">Connected the frontend to a Flask backend with SQLite for data management</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="margin: 0 0 0.75rem; color: var(--accent-color);">Report Writing & Documentation</h3>
+                                <ul style="margin: 0; padding-left: 1.5rem;">
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Authored a 40-page final report detailing methodology, results, and analyses</li>
+                                    <li style="color: var(--text-secondary);">Created visualizations (e.g., architecture diagrams, performance plots) to communicate findings effectively</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Future Work -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Future Work</h2>
+                    </div>
+                    <div class="card">
+                        <p style="margin-bottom: 1rem;">Looking ahead, I plan to:</p>
+                        <ul class="feature-list">
+                            <li>Incorporate real-time user feedback to refine recommendations dynamically</li>
+                            <li>Experiment with reinforcement learning to optimize long-term user engagement</li>
+                            <li>Scale the system to handle larger datasets, such as Yelp's full historical data</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Links -->
+                <section class="section fade-in">
+                    <div class="section-header">
+                        <h2>Repository & Documentation</h2>
+                    </div>
+                    <div class="card">
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://github.com/tonyctyy/content-recommendation" class="btn btn-primary">
+                                View GitHub Repository
+                            </a>
+                            <a href="projects/ai-recommendations-report.pdf" class="btn btn-secondary">
+                                Final Report (PDF)
+                            </a>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                            <h3 style="margin-top: 0;">License</h3>
+                            <p style="color: var(--text-muted);">This project is licensed under the MIT License.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation -->
+                <section class="section fade-in">
+                    <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include sidebar script -->
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

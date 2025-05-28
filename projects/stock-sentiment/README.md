@@ -28,7 +28,8 @@ There are several key steps in the methodology of this project:
 
 ### Portfolio Design
 A Mean-Variance Optimization (MVO) portfolio is designed as the benchmark portfolio.  
-![portfolio-optimization](./screenshots/portfolio-optimization.png)
+
+![portfolio-optimization](../../screenshots/stock-sentiment/portfolio-optimization.png)
 
 ### Classification
 Use classification models to predict upward or downward movements in stock prices. The most frequent label within the rebalance period is selected as the final prediction.
@@ -40,15 +41,18 @@ Use classification models to predict upward or downward movements in stock price
 
 ### Model Selection
 #### Using MVO as the Benchmark Portfolio:
-![adjusting-portfolio-weight](./screenshots/adjusting-portfolio-weight.png)  
+
+![adjusting-portfolio-weight](../../screenshots/stock-sentiment/adjusting-portfolio-weight.png)  
 **Logistic Regression (LR)** is selected as the best model.
 
 #### Using PCA for Dimensionality Reduction (MVO): 
-![adjusting-portfolio-weight-PCA](./screenshots/adjusting-portfolio-weight-PCA.png)  
+
+![adjusting-portfolio-weight-PCA](../../screenshots/stock-sentiment/adjusting-portfolio-weight-PCA.png)  
 **Random Forest (RF)** is selected as the best model.
 
 #### Using Equal Weights Portfolio (EWP) as the Benchmark:
-![adjusting-portfolio-weight-EWP](./screenshots/adjusting-portfolio-weight-EWP.png)
+
+![adjusting-portfolio-weight-EWP](../../screenshots/stock-sentiment/adjusting-portfolio-weight-EWP.png)
 
 ## Insights and Results
 - **Performance**: Certain models can slightly improve annual return and Sharpe Ratio while maintaining similar variance.
@@ -59,9 +63,6 @@ Use classification models to predict upward or downward movements in stock price
 - **Machine Learning Models**: Current models like Logistic Regression and Random Forest have limitations in prediction accuracy. Exploring advanced models such as GANs may improve results.
 - **Weight Adjustment**: More robust formulas to favor matching cases, and combining price prediction to optimize MVO portfolios, could be beneficial.
 - **Rebalance Period**: A shorter rebalance period may be more effective, as market sentiment can influence prices over a brief period. Day-trading or 3-day trading strategies are recommended.
-
-## Repository
-Find the source code and additional information in the [stock-sentiment.ipynb](https://github.com/tonyctyy/My-Projects/tree/main/projects/stock-sentiment/stock-sentiment.ipynb).
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE).

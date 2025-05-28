@@ -6,7 +6,7 @@ const sidebarConfig = {
         {
             title: "Portfolio",
             links: [
-                { href: "index.html", text: "Home" }
+                { href: "./", text: "Home" }
             ]
         },
         {
